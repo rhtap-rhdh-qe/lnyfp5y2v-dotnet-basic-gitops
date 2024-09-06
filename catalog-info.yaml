@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: lnyfp5y2v-dotnet-basic-gitops
+  description: This is GitOps manifest for lnyfp5y2v-dotnet-basic   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: lnyfp5y2v-dotnet-basic
+    janus-idp.io/tekton: lnyfp5y2v-dotnet-basic
+    backstage.io/kubernetes-id: lnyfp5y2v-dotnet-basic 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:lnyfp5y2v-dotnet-basic
